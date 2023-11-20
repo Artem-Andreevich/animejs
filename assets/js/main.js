@@ -75,7 +75,26 @@ $(function (){
 
 
 
-	
+	const warmPath = anime.path('.warm__path svg path')
+	const warmScroll =  anime({
+		targets: '.scroll-warm__ball',
+		translateX: warmPath( 'x' ),
+		translateY: warmPath( 'y' ),
+		duration: 600,
+		easing: 'linear',
+		autoplay: false,
+		loop: false,
+	})
+
+	const warmTouch =  anime({
+		targets: '.touch-warm__ball',
+		translateX: warmPath( 'x' ),
+		translateY: warmPath( 'y' ),
+		duration: 1600,
+		easing: 'linear',
+		autoplay: false,
+		loop: false,
+	})
 
 	const recomendAnim = anime({
 		targets: [...document.querySelectorAll('.recomend-item')],
@@ -91,7 +110,6 @@ $(function (){
 			return i%2 ? ['-800px 100px', '0px 0px'] : ['-800px -100px', '0px 0px']
 		}, 
 	})
-
 
 	const catalogAnim = anime({
 		targets: [...document.querySelectorAll('.main-catalog > div')],
@@ -124,8 +142,9 @@ $(function (){
 		translateX: ['0vh', '-50vh'],
 		translateY: ['200vh', '240vh'],
 	}).add({
+		targets: document.querySelectorAll('.card-item__content p '), 
+		opacity: 1, 
 		duration: 300,
-		rotate: 360,
 	})
 
 
@@ -141,29 +160,33 @@ $(function (){
 			seek(){},
 		},
 		{
-			target: 'recomend',
-			animation: recomendAnim,
-			remove: false,
+			target: 'scroll-warm',
+			animation: warmScroll,
+			remove: true,
 			scroll: true,
 			play(){this.animation.play()},
-			seek(el, speed = 1.2, offset = 800 ){ 
-				document.addEventListener('scroll', () => {
-					const scrollPercent = window.scrollY - el.offsetTop
-					this.animation.seek( ((scrollPercent + offset) / speed))		
-				}) 
+			seek(scrollPercent, speed = 2.5, offset = 600 ){ 
+				this.animation.seek( ((scrollPercent + offset) / speed) )
+			},
+		},
+		{
+			target: 'recomend',
+			animation: recomendAnim,
+			remove: true,
+			scroll: true,
+			play(){this.animation.play()},
+			seek(scrollPercent, speed = 1.2, offset = 800 ){ 
+				this.animation.seek( ((scrollPercent + offset) / speed) )
 			},
 		},
 		{
 			target: 'main-banner',
 			animation: rotateOnScroll,
-			remove: false,
+			remove: true,
 			scroll: true,
 			play(){this.animation.play()},
-			seek(el, speed = 2.2, offset = 800 ){ 
-				document.addEventListener('scroll', () => {
-					const scrollPercent = window.scrollY - el.offsetTop
-					this.animation.seek( ((scrollPercent + offset) / speed) )		
-				}) 
+			seek(scrollPercent, speed = 2.2, offset = 800 ){ 
+				this.animation.seek( ((scrollPercent + offset) / speed) )
 			},
 		},
 	]
@@ -173,14 +196,24 @@ $(function (){
 		rootMargin: "200px", 
 	}
 
+
+	const scrollHandler = (el, scroll) => {
+		let scrollPercent = 0
+		return scrollPercent = scroll - el.offsetTop
+	}
+	
 	function isVsible( entries ) {
 		entries.forEach( entry => {
 			if(entry.isIntersecting) {
 
 				animeApply.forEach( el => {
-					if( el.target === entry.target.getAttribute('class')) {
-						
-						el.scroll ? el.seek(entry.target) : el.play() 
+					if(entry.target.classList.contains(el.target)) {
+		
+						if(el.scroll) {
+							window.addEventListener('scroll', () => {
+								el.seek(scrollHandler(entry.target, window.scrollY))
+							}) 
+						} else { el.play() }
 						el.remove ? observer.unobserve(entry.target) : null
 
 					} 
@@ -191,14 +224,13 @@ $(function (){
 	}
 
 
-
 	let observer = new IntersectionObserver(isVsible, observeOptions);
 	const animeElements = []
 	animeApply.forEach( el => animeElements.push(el.target))
 	animeElements.forEach ( el => { observer.observe(document.querySelector(`.${el}`)) })
 
 
-
+	document.querySelector('.touch-warm__ball').addEventListener('click' , () => { warmTouch.play() })
 
 
 
