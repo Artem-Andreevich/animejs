@@ -143,7 +143,6 @@ $(function (){
 		translateY: ['200vh', '240vh'],
 	}).add({
 		targets: document.querySelectorAll('.card-item__content p '), 
-		opacity: 1, 
 		duration: 300,
 	})
 
