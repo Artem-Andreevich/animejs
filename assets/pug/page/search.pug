@@ -1,0 +1,40 @@
+extends ../layout/head.pug 
+block content
+    main
+        .container
+            include ../block/bread.pug
+
+            .search-result
+
+                .d-flex.justify-content-between.flex-wrap.gap-2.mb-3
+                    span.bold.fs--24-18 Результаты поиска 1 - 50 из 188
+                    a.self-center.color-main.hover-main.hover-opacity(href="#") Сортировать по дате 
+                
+                form.search-form(action='/search/' method='GET')
+                    input(type="text" name="q" placeholder="Поиск оборудования")
+                    button(type="submit")
+                        +svg('loop', 28)(class='icon size--30-20')
+
+                .search-result__item
+                    a.color-main.fs--24-18.hover-main.hover-opacity(href="#") <b>Хомут</b> для крепления труб и воздуховодов без прокладки
+                    p FCS - <b>хомут</b> без прокладки   FCSG - хомут с резиновой прокладкой Размеры, мм
+                    .d-flex.justify-content-between.flex-wrap.gap-2
+                        ul.d-flex.flex-wrap.fs--16-14
+                            li: <b>Путь:&nbsp;&nbsp;</b>
+                            li: a.color-main.hover-main.hover-opacity(href="#") Главная
+                            li: a.color-main.hover-main.hover-opacity(href="#") Каталог
+                            li: a.color-main.hover-main.hover-opacity(href="#") Каталог
+                            li: a.color-main.hover-main.hover-opacity(href="#") Каталог
+                        small Изменен: 09.15.2020
+
+                .search-result__item
+                    a.color-main.fs--24-18.hover-main.hover-opacity(href="#") <b>Хомут</b> для крепления труб и воздуховодов без прокладки
+                    .d-flex.justify-content-between.flex-wrap.gap-2
+                        ul.d-flex.flex-wrap.fs--16-14
+                            li: <b>Путь:&nbsp;&nbsp;</b>
+                            li: a.color-main.hover-main.hover-opacity(href="#") Главная
+                            li: a.color-main.hover-main.hover-opacity(href="#") Каталог
+                        small Изменен: 09.15.2020
+
+                .my-4
+                    include ../block/pagin.pug

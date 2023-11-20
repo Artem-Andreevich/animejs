@@ -1,0 +1,29 @@
+include mixins.pug
+<!DOCTYPE html>
+html(lang="ru")
+    head
+        meta(charset='utf-8')
+        meta(name='viewport', content='width=device-width,initial-scale=1,shrink-to-fit=no')
+        link(rel='preconnect', href='https://fonts.googleapis.com')
+        link(rel='preconnect', href='https://fonts.gstatic.com', crossorigin)
+        link(href='css/bootstrap.min.css', rel='stylesheet')
+        link(href='css/slick.css', rel='stylesheet')
+        link(href='css/jquery.fancybox.min.css', rel='stylesheet')
+        link(href='css/styles.min.css', rel='stylesheet')
+        link(href='css/media.min.css', rel='stylesheet')
+        link(rel="icon" href="fic.svg" type="image/svg+xml")
+        title #{title}
+        script(src='js/jquery.min.js')
+        script(src='js/jquery.fancybox.min.js')
+        script(src='js/popper.min.js')
+        script(src='js/bootstrap.min.js')
+        script(src='js/slick.min.js')
+        script(src='js/anime.min.js')
+        script(src='js/main.js')
+    body.inner-page
+        include svg.pug
+        block modal
+        .wrapper 
+            include header.pug
+            block content 
+            include footer.pug

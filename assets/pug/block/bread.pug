@@ -1,0 +1,18 @@
+include ../layout/mixins.pug
+.breadcrumb
+    ul.breadcrumb__list 
+        li.breadcrumb__item: a.page__menu-link(href="#") Главная 
+        li.breadcrumb__item
+            a.page__menu-link.dropdown-toggle(href="#" data-bs-toggle="dropdown" aria-expanded="false") Продукция
+            ul.dropdown-menu(aria-labelledby='dropdownMenuLink')
+                li: a.dropdown-item(href='#') Action
+                li: a.dropdown-item(href='#') Another action
+                li: a.dropdown-item(href='#') Something else here
+        li.breadcrumb__item
+            a.page__menu-link.dropdown-toggle(href="#" data-bs-toggle="dropdown" aria-expanded="false") Вентиляторы Bahcivanmotor
+            ul.dropdown-menu(aria-labelledby='dropdownMenuLink')
+                li: a.dropdown-item(href='#') Action
+                li: a.dropdown-item(href='#') Another action
+                li: a.dropdown-item(href='#') Something else here
+        li.breadcrumb__item: a(href="#") Радиальные вентиляторы
+    h1.page__title #{title}

@@ -1,0 +1,56 @@
+include mixins.pug
+header.header
+        .header__top
+            .container
+                .d-flex.justify-content-between.align-items-center.gap-5.py-4
+                    .header__info.d-flex.align-items-center.gap-4
+                        .contact-item 
+                            +svg('marker', 16, 21)
+                            span г. Москва, Электролитный проезд 3Б стр 6
+                        .contact-item 
+                            +svg('marker', 16, 21)
+                            span +7 917 361-30-00
+                    .header__nav 
+                        ul.nav 
+                            li
+                                a.hover-main.dropdown(href="#" type="button" data-bs-toggle="dropdown" aria-expanded="false") Каталог 
+                                ul.dropdown-menu 
+                                    li: a.dropdown-item(href="#") Ссылка
+                                    li: a.dropdown-item(href="#") Ссылка Длинная
+                                    li: a.dropdown-item(href="#") Ссылка Очень Очень длинная
+                                    li: a.dropdown-item(href="#") Ссылка
+                                    li: a.dropdown-item(href="#") Ссылка
+                            li: a.hover-main.active(href="#") Главная 
+                            li: a.hover-main(href="#") Как купить 
+                            li
+                                a.hover-main.dropdown(href="#" type="button" data-bs-toggle="dropdown" aria-expanded="false") Доставка
+                                ul.dropdown-menu 
+                                    li: a.dropdown-item(href="#") Ссылка
+                                    li: a.dropdown-item(href="#") Ссылка
+                                    li: a.dropdown-item(href="#") Ссылка
+                                    li: a.dropdown-item(href="#") Ссылка
+                                    li: a.dropdown-item(href="#") Ссылка
+                            li: a.hover-main(href="#") О компании
+                            li: a.hover-main(href="#") Мы в instagram
+                            li: a.hover-main(href="#") Акции
+        .container
+            .header__line 
+                .header__logo 
+                    a.logo(href='#')
+                        img(src="images/logo.png", alt="")
+                .header__search 
+                    form.search-form(action='/search/' method='GET')
+                        +svg('loop')(class='icon size--30-25')
+                        input.hover-outline-second.hover-bg-white(type="text" name="q" placeholder="Поиск оборудования")
+                        button.hover(type="submit") Найти
+                .header__control 
+                    .control 
+                        a.control__item.hover.hover-main(href="#")
+                            +svg('fav')(class='icon-fill color-accent size--30-25')
+                            span Избранное
+                        a.control__item(href="#")
+                            +svg()
+                            span Корзина
+                        a.control__item(href="#")
+                            +svg()
+                            span Войти

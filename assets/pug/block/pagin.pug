@@ -1,0 +1,14 @@
+include ../layout/mixins.pug
+ul.pagination
+    ul.d-flex.gap-2
+        li: a.flex-center.size--60-50.bg-second.hover-white.hover-bg-main.disable(href="#"): +svg('pag-dleft', 16, 10)(class='icon')
+        li: a.flex-center.size--60-50.bg-second.hover-white.hover-bg-main.disable(href="#"): +svg('pag-left', 6, 10)(class='icon')
+    ul.d-flex.gap-2
+        li: a.flex-center.size--60-50.bg-second.hover-white.hover-bg-main.bold.active(href="#") 1
+        li: a.flex-center.size--60-50.bg-second.hover-white.hover-bg-main.bold(href="#") 2
+        li: a.flex-center.size--60-50.bg-second.hover-white.hover-bg-main.bold(href="#") 3
+        li: a.flex-center.size--60-50.bg-second.hover-white.hover-bg-main.bold(href="#") 4
+        li: a.flex-center.size--60-50.bg-second.hover-white.hover-bg-main.bold(href="#") 5
+    ul.d-flex.gap-2
+        li: a.flex-center.size--60-50.bg-second.hover-white.hover-bg-main(href="#"): +svg('pag-right', 6, 10)(class='icon')
+        li: a.flex-center.size--60-50.bg-second.hover-white.hover-bg-main(href="#"): +svg('pag-dright', 16, 10)(class='icon')

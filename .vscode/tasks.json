@@ -1,0 +1,35 @@
+{
+    // See https://go.microsoft.com/fwlink/?LinkId=733558
+    // for the documentation about the tasks.json format
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "pug",
+            "type": "shell",
+            "command": "pug assets -P"
+        },
+        {
+            "label": "layout del",
+            "type": "shell",
+            "command": "rm",
+            "args": ["assets/pug/layout/*.html"]
+        },
+        {
+            "label": "page del",
+            "type": "shell",
+            "command": "rm",
+            "args": ["assets/pug/page/*.html"]
+        },
+        {
+            "label": "block del",
+            "type": "shell",
+            "command": "rm",
+            "args": ["assets/pug/block/*.html"]
+        },
+        {
+            "label": "pug dev",
+            "dependsOrder": "sequence",
+            "dependsOn": ["pug", "layout del", "page del", "block del"]
+        },
+    ]
+}

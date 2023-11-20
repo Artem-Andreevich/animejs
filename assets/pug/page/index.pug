@@ -1,0 +1,195 @@
+extends ../layout/head.pug 
+block content
+    main
+        section.bg-light
+            .container
+                .d-flex.flex-column.align-items-center.gap-3.w-50.mx-auto.py-5.text-center
+                    h4.color-main.fs--32-24.bold Подпишись на нашу рассылку
+                    p.color-main Присоединяйтесь к программе LFLF STORE, чтобы получать постоянные скидки и персональные предложения
+                    a.btn-main.hover-main.ease(href="#") 
+                        span.lh-100 Оформи подписку
+                        +svg('pag-right', 20, 14)(class='icon') 
+        section.about
+            .container 
+                .d-flex.flex-column.align-items-center.gap-3.w-75.mx-auto.py-5.text-center
+                    h4.color-main.fs--32-24.bold О компании
+                    p.color-main LalaStore - магазин качественной и модной одежды и товаров для новорожденных и малышей до года. У нас вы подберете стильный комплект на выписку и базовый гардероб на первый год вашего ребенка.
+                        <br><br>Качество товаров на высоте, так как мы работаем только с проверенными поставщиками. Все изделия имеют сертификаты качества.
+                        <br><br>Нам доверяют, и к нам возвращаются!
+                    .about 
+                        .about__item 
+                            +svg('marker')(class='icon color-white size--60-40')
+                            h5.fs--16-12.color-main.bold Быстрая доставка
+                            span.fs--14-12 Бережно доставляем товары по России за 24 часа
+                        .about__item 
+                            +svg('marker')(class='icon color-white size--60-40')
+                            h5.fs--16-12.color-main.bold Быстрая доставка
+                            span.fs--14-12 Бережно доставляем товары по России за 24 часа
+                        .about__item 
+                            +svg('marker')(class='icon color-white size--60-40')
+                            h5.fs--16-12.color-main.bold Быстрая доставка
+                            span.fs--14-12 Бережно доставляем товары по России за 24 часа
+        .container
+            .main-banner 
+                a.banner.banner__lg(href="#")
+                    .banner__text 
+                        h1.fs--36-24.color-main.bold Большая зимняя распродажа от LeoKid
+                        span.fs--18-14.color-dark Конверт Leokid Classic подходит для использования в любых колясках, автокреслах и санках. Для прогулок осенью, зимой, весной и даже прохладным летом.
+                a.banner.banner__xs.d-flex.flex-column.justify-content-end.align-items-center.gap-2.p-2.hover-main(href="#")
+                    .bg-white.radius-main.bold.py-2.px-4 Подборка №106
+                    .bg-white.radius-main.color-second.py-2.px-4 1 221 Р
+        section.my-5
+            .seporate.mb-4
+                span.color-main.fs--36-24.bold.text-center.px-5 Каталог
+            .container
+                .main-catalog
+                    div
+                        img(src="images/cat.jpg", alt="")
+                        a.dropdown.dropdown--white(href="#" type="button" data-bs-toggle="dropdown" aria-expanded="false") Аксессуары 
+                        ul.dropdown-menu 
+                            li: a.dropdown-item(href="#") Ссылка
+                            li: a.dropdown-item(href="#") Ссылка Длинная
+                            li: a.dropdown-item(href="#") Ссылка Очень Очень длинная
+                            li: a.dropdown-item(href="#") Ссылка
+                            li: a.dropdown-item(href="#") Ссылка
+                    div
+                        img(src="images/cat.jpg", alt="")
+                        a.dropdown.dropdown--white(href="#" type="button" data-bs-toggle="dropdown" aria-expanded="false") Аксессуары 
+                        ul.dropdown-menu 
+                            li: a.dropdown-item(href="#") Ссылка
+                            li: a.dropdown-item(href="#") Ссылка Длинная
+                            li: a.dropdown-item(href="#") Ссылка Очень Очень длинная
+                            li: a.dropdown-item(href="#") Ссылка
+                            li: a.dropdown-item(href="#") Ссылка
+                    div
+                        img(src="images/cat.jpg", alt="")
+                        a.dropdown.dropdown--white(href="#" type="button" data-bs-toggle="dropdown" aria-expanded="false") Аксессуары 
+                        ul.dropdown-menu 
+                            li: a.dropdown-item(href="#") Ссылка
+                            li: a.dropdown-item(href="#") Ссылка Длинная
+                            li: a.dropdown-item(href="#") Ссылка Очень Очень длинная
+                            li: a.dropdown-item(href="#") Ссылка
+                            li: a.dropdown-item(href="#") Ссылка
+                    div
+                        img(src="images/cat.jpg", alt="")
+                        a.dropdown.dropdown--white(href="#" type="button" data-bs-toggle="dropdown" aria-expanded="false") Аксессуары 
+                        ul.dropdown-menu 
+                            li: a.dropdown-item(href="#") Ссылка
+                            li: a.dropdown-item(href="#") Ссылка Длинная
+                            li: a.dropdown-item(href="#") Ссылка Очень Очень длинная
+                            li: a.dropdown-item(href="#") Ссылка
+                            li: a.dropdown-item(href="#") Ссылка
+                    div
+                        img(src="images/cat.jpg", alt="")
+                        a.dropdown.dropdown--white(href="#" type="button" data-bs-toggle="dropdown" aria-expanded="false") Аксессуары 
+                        ul.dropdown-menu 
+                            li: a.dropdown-item(href="#") Ссылка
+                            li: a.dropdown-item(href="#") Ссылка Длинная
+                            li: a.dropdown-item(href="#") Ссылка Очень Очень длинная
+                            li: a.dropdown-item(href="#") Ссылка
+                            li: a.dropdown-item(href="#") Ссылка
+        section.my-5
+            .seporate.mb-4
+                span.color-main.fs--36-24.bold.text-center.px-5 Подборка
+            .container 
+                .recomend
+                    a.recomend-item(href='#')
+                        img(src="images/ban2.jpg", alt="")
+                        span Подборка №106
+                    a.recomend-item(href='#')
+                        img(src="images/ban2.jpg", alt="")
+                        span Подборка №106
+                    a.recomend-item(href='#')
+                        img(src="images/ban2.jpg", alt="")
+                        span Подборка №106
+                    a.recomend-item(href='#')
+                        img(src="images/ban2.jpg", alt="")
+                        span Подборка №106
+                    a.recomend-item(href='#')
+                        img(src="images/ban2.jpg", alt="")
+                        span Подборка №106
+        section.bg-light
+            .container
+                .d-flex.flex-column.align-items-center.gap-3.w-50.mx-auto.py-5.text-center
+                    h4.color-main.fs--32-24.bold Подпишись на нашу рассылку
+                    p.color-main Присоединяйтесь к программе LFLF STORE, чтобы получать постоянные скидки и персональные предложения
+                    a.btn-main.hover-main.ease(href="#") 
+                        span.lh-100 Оформи подписку
+                        +svg('pag-right', 20, 14)(class='icon') 
+        section.about
+            .container 
+                .d-flex.flex-column.align-items-center.gap-3.w-75.mx-auto.py-5.text-center
+                    h4.color-main.fs--32-24.bold О компании
+                    p.color-main LalaStore - магазин качественной и модной одежды и товаров для новорожденных и малышей до года. У нас вы подберете стильный комплект на выписку и базовый гардероб на первый год вашего ребенка.
+                        <br><br>Качество товаров на высоте, так как мы работаем только с проверенными поставщиками. Все изделия имеют сертификаты качества.
+                        <br><br>Нам доверяют, и к нам возвращаются!
+                    .about 
+                        .about__item 
+                            +svg('marker')(class='icon color-white size--60-40')
+                            h5.fs--16-12.color-main.bold Быстрая доставка
+                            span.fs--14-12 Бережно доставляем товары по России за 24 часа
+                        .about__item 
+                            +svg('marker')(class='icon color-white size--60-40')
+                            h5.fs--16-12.color-main.bold Быстрая доставка
+                            span.fs--14-12 Бережно доставляем товары по России за 24 часа
+                        .about__item 
+                            +svg('marker')(class='icon color-white size--60-40')
+                            h5.fs--16-12.color-main.bold Быстрая доставка
+                            span.fs--14-12 Бережно доставляем товары по России за 24 часа
+        section.bg-light
+            .container
+                .d-flex.flex-column.align-items-center.gap-3.w-50.mx-auto.py-5.text-center
+                    h4.color-main.fs--32-24.bold Подпишись на нашу рассылку
+                    p.color-main Присоединяйтесь к программе LFLF STORE, чтобы получать постоянные скидки и персональные предложения
+                    a.btn-main.hover-main.ease(href="#") 
+                        span.lh-100 Оформи подписку
+                        +svg('pag-right', 20, 14)(class='icon') 
+        section.about
+            .container 
+                .d-flex.flex-column.align-items-center.gap-3.w-75.mx-auto.py-5.text-center
+                    h4.color-main.fs--32-24.bold О компании
+                    p.color-main LalaStore - магазин качественной и модной одежды и товаров для новорожденных и малышей до года. У нас вы подберете стильный комплект на выписку и базовый гардероб на первый год вашего ребенка.
+                        <br><br>Качество товаров на высоте, так как мы работаем только с проверенными поставщиками. Все изделия имеют сертификаты качества.
+                        <br><br>Нам доверяют, и к нам возвращаются!
+                    .about 
+                        .about__item 
+                            +svg('marker')(class='icon color-white size--60-40')
+                            h5.fs--16-12.color-main.bold Быстрая доставка
+                            span.fs--14-12 Бережно доставляем товары по России за 24 часа
+                        .about__item 
+                            +svg('marker')(class='icon color-white size--60-40')
+                            h5.fs--16-12.color-main.bold Быстрая доставка
+                            span.fs--14-12 Бережно доставляем товары по России за 24 часа
+                        .about__item 
+                            +svg('marker')(class='icon color-white size--60-40')
+                            h5.fs--16-12.color-main.bold Быстрая доставка
+                            span.fs--14-12 Бережно доставляем товары по России за 24 часа
+        section.bg-light
+            .container
+                .d-flex.flex-column.align-items-center.gap-3.w-50.mx-auto.py-5.text-center
+                    h4.color-main.fs--32-24.bold Подпишись на нашу рассылку
+                    p.color-main Присоединяйтесь к программе LFLF STORE, чтобы получать постоянные скидки и персональные предложения
+                    a.btn-main.hover-main.ease(href="#") 
+                        span.lh-100 Оформи подписку
+                        +svg('pag-right', 20, 14)(class='icon') 
+        section.about
+            .container 
+                .d-flex.flex-column.align-items-center.gap-3.w-75.mx-auto.py-5.text-center
+                    h4.color-main.fs--32-24.bold О компании
+                    p.color-main LalaStore - магазин качественной и модной одежды и товаров для новорожденных и малышей до года. У нас вы подберете стильный комплект на выписку и базовый гардероб на первый год вашего ребенка.
+                        <br><br>Качество товаров на высоте, так как мы работаем только с проверенными поставщиками. Все изделия имеют сертификаты качества.
+                        <br><br>Нам доверяют, и к нам возвращаются!
+                    .about 
+                        .about__item 
+                            +svg('marker')(class='icon color-white size--60-40')
+                            h5.fs--16-12.color-main.bold Быстрая доставка
+                            span.fs--14-12 Бережно доставляем товары по России за 24 часа
+                        .about__item 
+                            +svg('marker')(class='icon color-white size--60-40')
+                            h5.fs--16-12.color-main.bold Быстрая доставка
+                            span.fs--14-12 Бережно доставляем товары по России за 24 часа
+                        .about__item 
+                            +svg('marker')(class='icon color-white size--60-40')
+                            h5.fs--16-12.color-main.bold Быстрая доставка
+                            span.fs--14-12 Бережно доставляем товары по России за 24 часа
+

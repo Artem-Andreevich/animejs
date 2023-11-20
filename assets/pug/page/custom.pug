@@ -1,0 +1,257 @@
+extends ../layout/head.pug 
+block content
+    main
+        .container
+            .flex-center.size--60-40.bg-main.color-light.radius-main.p-2.hover.hover-outline-main
+                +svg('location')(class='icon size')
+
+            section.my-5.grid--3-2-1.gap-4
+                // FORM
+                form.form.d-flex.flex-column.gap-3(action="")
+                    .form-floating
+                        input.form-control.radius-main.outline-dark.hover-outline-accent.ease(type='text', placeholder='Логин')
+                        label Логин
+                    .form-floating
+                        input.form-control.radius-main.outline-dark.hover-outline-accent.ease(type='text', placeholder='Пароль')
+                        label Пароль
+                    button.bg-main.hover.hover-outline-main.hover-shadow-main.radius-main
+                        span.fs--16-14.color-white.bold Войти
+                    label.page__checkbox
+                        input(type="checkbox" required)
+                        svg(xmlns='http://www.w3.org/2000/svg', width='20px', height='20px', viewBox='0 0 0.253167 0.253167')
+                            rect(fill='#ED4300', width='0.253167', height='0.253167', rx='0.0506327', ry='0.0506327')
+                            polyline(fill='none', stroke='white', stroke-width='0.0253182', stroke-linecap='round', stroke-linejoin='round', points='0.177213,0.0885956 0.113921,0.151887 0.0759509,0.113914 ')
+                        span.fs--16-xs-12 Ddwqdwqdwq dwq dw dwq&nbsp;
+                            a.page__underline.hover-main(href="#") Политика
+
+                // TEXT-PREVIEW
+                div
+                    .fs--16-12.lh-140.text-preview Оперативная память ADATA  AD4U266616G19-SGN DDR4 16ГбОперативная память ADATA  AD4U266616G19-SGN DDR4 16Гб  Оперативная память ADATA  AD4U266616G19-SGN DDR4 16ГбОперативная память ADATA  AD4U266616G19-SGN DDR4 16Гб  Оперативная память ADATA  AD4U266616G19-SGN DDR4 16ГбОперативная память ADATA  AD4U266616G19-SGN DDR4 16Гб
+                div
+                    .fs--16-12.text-preview.text-preview-open Оперативная память ADATA  AD4U266616G19-SGN DDR4 16ГбОперативная память ADATA  AD4U266616G19-SGN DDR4 16Гб  Оперативная память ADATA  AD4U266616G19-SGN DDR4 16ГбОперативная память ADATA  AD4U266616G19-SGN DDR4 16Гб  Оперативная память ADATA  AD4U266616G19-SGN DDR4 16ГбОперативная память ADATA  AD4U266616G19-SGN DDR4 16Гб
+
+            .grid--3-2-1.gap-3.my-4
+                .size.size--content.bg-second.color-main.radius-main.p-4.self-center.shadow.hover.hover-shadow-accent
+                    +svg('box-seam', 140, 100)(class='icon-fill')
+                .size.size--content.bg-light.color-main.radius-main.p-4.self-center.shadow.hover.hover-outline-main
+                    +svg('box-seam', 140, 100)(class='icon-fill')
+                .size.size--content.bg-second.color-main.radius-main.p-4.self-center.shadow.hover.hover-shadow-main
+                    +svg('box-seam', 140, 100)(class='icon-fill')
+            
+            include ../block/pagin.pug
+
+            section.my-5
+                // SEARCH-FORM
+                form.search-form(action='/search/' method='GET')
+                    input.bg-second.hover-outline-main.hover-bg-white(type="text" name="q" placeholder="Поиск оборудования")
+                    button.hover.hover-main(type="submit")
+                        +svg('loop', 28)(class='icon size--30-20')
+
+            section.my-5
+                // CHECKBOX - RADIO BUTTON
+                form.d-flex.flex-column.gap-2
+                    label.page__checkbox
+                        input(type="checkbox")
+                        svg(xmlns='http://www.w3.org/2000/svg', width='20px', height='20px', viewBox='0 0 0.253167 0.253167')
+                            rect(fill='#ED4300', width='0.253167', height='0.253167', rx='0.0506327', ry='0.0506327')
+                            polyline(fill='none', stroke='white', stroke-width='0.0253182', stroke-linecap='round', stroke-linejoin='round', points='0.177213,0.0885956 0.113921,0.151887 0.0759509,0.113914 ')
+                        span Ddwqdwqdwq dwq dw dwq&nbsp;
+                            a.page__underline.hover-main(href="#") Политика
+                            
+                    label.page__radio
+                        input(type="radio" name="radio" value="25" checked)
+                        svg(xmlns='http://www.w3.org/2000/svg', width='20px', height='20px', viewBox='0 0 0.253167 0.253167')
+                            rect(fill='#ED4300', width='0.253167', height='0.253167', rx='0.126584', ry='0.126584')
+                            rect(fill='white', x='0.0632923', y='0.0632921', width='0.126584', height='0.126584', rx='0.126584', ry='0.126584')
+                        span Radio
+                    label.page__radio
+                        input(type="radio" name="radio" value="25")
+                        svg(xmlns='http://www.w3.org/2000/svg', width='20px', height='20px', viewBox='0 0 0.253167 0.253167')
+                            rect(fill='#ED4300', width='0.253167', height='0.253167', rx='0.126584', ry='0.126584')
+                            rect(fill='white', x='0.0632923', y='0.0632921', width='0.126584', height='0.126584', rx='0.126584', ry='0.126584')
+                        span Radio
+
+            section.my-5.d-flex.flex-wrap.gap-3
+                // OUTLINE
+                .outline-main.flex-center.radius-main.p-3 .outline-main
+                .outline-accent.flex-center.radius-main.p-3 .outline-accent
+                .outline-second.flex-center.radius-main.p-3 .outline-second
+                .outline-light.flex-center.radius-main.p-3 .outline-light
+                .outline-white.flex-center.radius-main.p-3 .outline-white
+                .outline-black.flex-center.radius-main.p-3 .outline-black
+                .outline-dark.flex-center.radius-main.p-3 .outline-dark
+
+            section.my-5.d-flex.flex-wrap.gap-3
+                // SIZE
+                div
+                    .size--60-50.bg-main
+                    span .size--60-50
+                div
+                    .size--60-40.bg-main
+                    span .size--60-40
+                div
+                    .size--60-30.bg-main
+                    span .size--60-30
+                div
+                    .size--50-30.bg-accent
+                    span .size--50-30
+                div
+                    .size--40-30.bg-accent
+                    span .size--40-30
+                div
+                    .size--40-20.bg-accent
+                    span .size--40-20
+                div
+                    .size--30-25.bg-accent
+                    span .size--30-25
+                div
+                    .size--content.bg-main.color-white.p-2 .size--content
+                div
+                    .size.bg-main.color-white.p-2 .size
+                
+
+            section.my-5
+                .grid--4-2-2
+                    div
+                        // FONT SIZE
+                        .fs--72-32.fw-normal.lh-140.color-main.hover-accent.ease .fs--72-32
+                        .fs--72-32.fw-bold.lh-100 .fs--72-32
+                        .fs--72-24.color-second .fs--72-24
+                        .fs--48-24.color-light .fs--48-24
+                        .fs--48-sm-18.fw-bold.color-second.hover-light.ease .fs--48-sm-18
+                        .fs--48-xs-18 .fs--48-xs-18
+                        .fs--36-24 .fs--36-24
+                        .fs--36-sm-18 .fs--36-sm-18
+                        .fs--32-24 .fs--32-24
+                        .fs--32-sm-18 .fs--32-sm-18
+                        .fs--32-sm-16 .fs--32-sm-16
+                        .fs--24-18 .fs--24-18
+                        .fs--24-lg-16 .fs--24-lg-16
+                        .fs--24-sm-16 .fs--24-sm-16
+                        .fs--18-16 .fs--18-16
+                        .fs--18-14 .fs--18-14
+                        .fs--16-14 .fs--16-14
+                        .fs--16-sm-12 .fs--16-sm-12
+                        .fs--16-xs-12 .fs--16-xs-12
+                        .fs--16-sm-10 .fs--16-sm-10
+                        .fs--16-xs-10 .fs--16-xs-10
+                        .fs--14-12 .fs--14-12
+                        .fs--14-sm-10 .fs--14-sm-10
+                        .fs--14-xs-10 .fs--14-xs-10
+                    .d-flex.flex-column.gap-3.self-center.align-self-start
+                        // BG-COLOR
+                        .size--content.p-4.bg-main.color-white .bg-main
+                        .size--content.p-4.bg-accent.color-white .bg-accent
+                        .size--content.p-4.bg-second .bg-second
+                        .size--content.p-4.bg-light .bg-light
+                        .size--content.p-4.bg-white .bg-white
+                        .size--content.p-4.bg-black.color-white .bg-black
+                        .size--content.p-4.bg-dark.color-white .bg-dark
+                    .d-flex.flex-column.gap-3.self-center.align-self-start
+                        // TEXT-COLOR
+                        .size--content.p-4.bg-dark.color-main .color-main
+                        .size--content.p-4.bg-second.color-accent .color-accent
+                        .size--content.p-4.bg-dark.color-second .color-second
+                        .size--content.p-4.bg-dark.color-light .color-light
+                        .size--content.p-4.bg-dark.color-white .color-white
+                        .size--content.p-4.bg-second.color-black .color-black
+                        .size--content.p-4.bg-second.color-dark .color-dark
+                    .d-flex.flex-column.gap-3.self-center.align-self-start
+                        // HOVER
+                        .size--content.p-4.bg-light.color-dark.hover.hover-main .hover-main
+                        .size--content.p-4.bg-light.color-main.hover.hover-accent .hover-accent
+                        .size--content.p-4.bg-light.color-dark.hover.hover-second .hover-second
+                        .size--content.p-4.bg-light.color-dark.hover.hover-light .hover-light
+                        .size--content.p-4.bg-light.color-dark.hover.hover-opacity .hover-opacity
+                        .size--content.p-4.bg-light.color-dark.hover.hover-outline-main .hover-outline-main
+                        .size--content.p-4.bg-light.color-dark.hover.hover-shadow-main .hover-shadow-main
+                        .size--content.p-4.bg-light.color-dark.hover.hover-shadow-accent .hover-shadow-accent
+
+            section.my-5
+               
+
+                .d-flex.my-3.gap-3.align-items-start.flex-wrap.flex-md-nowrap
+                    .d-flex.flex-fill.flex-column.gap-3
+                        .hover-anim-up.hover-shadow-main.ease.d-flex.shadow.p-4.flex-column.justify-content-between.align-items-start.gap-2.radius-main
+                            .fs--16-md-12.color-main.fw-bold.text-preview.text-preview-open.hover-dark Оперативная память ADATA  AD4U266616G19-SGN DDR4 16ГбОперативная память ADATA  AD4U266616G19-SGN DDR4 16Гб  Оперативная память ADATA  AD4U266616G19-SGN DDR4 16ГбОперативная память ADATA  AD4U266616G19-SGN DDR4 16Гб  Оперативная память ADATA  AD4U266616G19-SGN DDR4 16ГбОперативная память ADATA  AD4U266616G19-SGN DDR4 16Гб
+                            button.btn.fs--14-12.outline-accent.p-2.color-accent.hover-outline-dark.fw-bold Посмотреть..
+                        span .hover-anim-up
+                        span .hover-shadow-main
+                        span .radius-main
+                    .hover-shadow-accent.ease.d-flex.flex-fill.shadow.p-4.flex-column.justify-content-between.align-items-start.gap-2.radius-main
+                        .fs--16-md-12.color-main.fw-bold.text-preview.text-preview-open.hover-dark Оперативная память ADATA  AD4U266616G19-SGN DDR4 16ГбОперативная память ADATA  AD4U266616G19-SGN DDR4 16Гб  Оперативная память ADATA  AD4U266616G19-SGN DDR4 16ГбОперативная память ADATA  AD4U266616G19-SGN DDR4 16Гб  Оперативная память ADATA  AD4U266616G19-SGN DDR4 16ГбОперативная память ADATA  AD4U266616G19-SGN DDR4 16Гб
+                        button.btn.fs--14-12.outline-accent.p-2.color-accent.hover-outline-dark.fw-bold Посмотреть..
+                    .hover-shadow-dark.ease.d-flex.flex-fill.shadow.p-4.flex-column.justify-content-between.align-items-start.gap-2.radius-main
+                        .fs--16-md-12.color-main.fw-bold.text-preview.text-preview-open.hover-dark Оперативная память ADATA  AD4U266616G19-SGN DDR4 16ГбОперативная память ADATA  AD4U266616G19-SGN DDR4 16Гб  Оперативная память ADATA  AD4U266616G19-SGN DDR4 16ГбОперативная память ADATA  AD4U266616G19-SGN DDR4 16Гб  Оперативная память ADATA  AD4U266616G19-SGN DDR4 16ГбОперативная память ADATA  AD4U266616G19-SGN DDR4 16Гб
+                        button.btn.fs--14-12.outline-accent.p-2.color-accent.hover-outline-dark.fw-bold Посмотреть..
+                    .hover-outline-accent.ease.d-flex.flex-fill.shadow.p-4.flex-column.justify-content-between.align-items-start.gap-2.radius-main
+                        .fs--16-md-12.color-main.fw-bold.text-preview.text-preview-open.hover-dark Оперативная память ADATA  AD4U266616G19-SGN DDR4 16ГбОперативная память ADATA  AD4U266616G19-SGN DDR4 16Гб  Оперативная память ADATA  AD4U266616G19-SGN DDR4 16ГбОперативная память ADATA  AD4U266616G19-SGN DDR4 16Гб  Оперативная память ADATA  AD4U266616G19-SGN DDR4 16ГбОперативная память ADATA  AD4U266616G19-SGN DDR4 16Гб
+                        button.btn.fs--14-12.outline-accent.p-2.color-accent.hover-outline-dark.fw-bold Посмотреть..
+            
+            section.my-5
+                // GRID SYSTEMS
+                .grid--3-2-1.gap-3.my-5
+                    .grid-out.fs--48-24.fw-bold.color-main .grid--3-2-1
+                    .hover-anim-up.hover-outline-accent.ease.d-flex.flex-fill.shadow.p-4.flex-column.justify-content-between.align-items-start.gap-2.radius-main
+                        .fs--16-md-12.color-main.fw-bold.text-preview.text-preview-open.hover-dark Оперативная память ADATA  AD4U266616G19-SGN DDR4 16ГбОперативная память ADATA  AD4U266616G19-SGN DDR4 16Гб  Оперативная память ADATA  AD4U266616G19-SGN DDR4 16ГбОперативная память ADATA  AD4U266616G19-SGN DDR4 16Гб  Оперативная память ADATA  AD4U266616G19-SGN DDR4 16ГбОперативная память ADATA  AD4U266616G19-SGN DDR4 16Гб
+                        button.btn.fs--14-12.outline-accent.p-2.color-accent.hover-outline-dark.fw-bold Посмотреть..
+                    .hover-anim-down.hover-outline-accent.ease.d-flex.flex-fill.shadow.p-4.flex-column.justify-content-between.align-items-start.gap-2.radius-main
+                        .fs--16-md-12.color-main.fw-bold.text-preview.text-preview-open.hover-dark Оперативная память ADATA  AD4U266616G19-SGN DDR4 16ГбОперативная память ADATA  AD4U266616G19-SGN DDR4 16Гб  Оперативная память ADATA  AD4U266616G19-SGN DDR4 16ГбОперативная память ADATA  AD4U266616G19-SGN DDR4 16Гб  Оперативная память ADATA  AD4U266616G19-SGN DDR4 16ГбОперативная память ADATA  AD4U266616G19-SGN DDR4 16Гб
+                        button.btn.fs--14-12.outline-accent.p-2.color-accent.hover-outline-dark.fw-bold Посмотреть..
+                    .hover-anim-left.hover-outline-accent.ease.d-flex.flex-fill.shadow.p-4.flex-column.justify-content-between.align-items-start.gap-2.radius-main
+                        .fs--16-md-12.color-main.fw-bold.text-preview.text-preview-open.hover-dark Оперативная память ADATA  AD4U266616G19-SGN DDR4 16ГбОперативная память ADATA  AD4U266616G19-SGN DDR4 16Гб  Оперативная память ADATA  AD4U266616G19-SGN DDR4 16ГбОперативная память ADATA  AD4U266616G19-SGN DDR4 16Гб  Оперативная память ADATA  AD4U266616G19-SGN DDR4 16ГбОперативная память ADATA  AD4U266616G19-SGN DDR4 16Гб
+                        button.btn.fs--14-12.outline-accent.p-2.color-accent.hover-outline-dark.fw-bold Посмотреть..
+                
+                .grid--3-2-2.gap-2.gap-md-3.my-5
+                    .grid-out.fs--48-24.fw-bold.color-main .grid--3-2-2
+                    .ease.hover-outline-main.bg-light.d-flex.flex-fill.shadow.p-3.p-md-4.flex-column.justify-content-between.align-items-start.gap-2.radius-main
+                        .fs--16-md-12.color-main.fw-bold.text-preview.text-preview-open.hover-dark еративная память ADATA  AD4U266616G19-SGN DDR4 16ГбОперативная память ADATA  AD4U266616G19-SGN DDR4 16Гб  Оперативная память ADATA  AD4U266616G19-SGN DDR4 16ГбОперативная память ADATA  AD4U266616G19-SGN DDR4 16Гб  Оперативная память ADATA  AD4U266616G19-SGN DDR4 16ГбОперативная память ADATA  AD4U266616G19-SGN DDR4 16Гб
+                        button.btn.fs--14-xs-10.outline-accent.p-2.color-accent.hover-outline-dark.fw-bold Посмотреть..
+                    .ease.hover-outline-main.bg-light.d-flex.flex-fill.shadow.p-3.p-md-4.flex-column.justify-content-between.align-items-start.gap-2.radius-main
+                        .fs--16-md-12.color-main.fw-bold.text-preview.text-preview-open.hover-dark еративная память ADATA  AD4U266616G19-SGN DDR4 16ГбОперативная память ADATA  AD4U266616G19-SGN DDR4 16Гб  Оперативная память ADATA  AD4U266616G19-SGN DDR4 16ГбОперативная память ADATA  AD4U266616G19-SGN DDR4 16Гб  Оперативная память ADATA  AD4U266616G19-SGN DDR4 16ГбОперативная память ADATA  AD4U266616G19-SGN DDR4 16Гб
+                        button.btn.fs--14-xs-10.outline-accent.p-2.color-accent.hover-outline-dark.fw-bold Посмотреть..
+                    .ease.hover-outline-main.bg-light.d-flex.flex-fill.shadow.p-3.p-md-4.flex-column.justify-content-between.align-items-start.gap-2.radius-main
+                        .fs--16-md-12.color-main.fw-bold.text-preview.text-preview-open.hover-dark еративная память ADATA  AD4U266616G19-SGN DDR4 16ГбОперативная память ADATA  AD4U266616G19-SGN DDR4 16Гб  Оперативная память ADATA  AD4U266616G19-SGN DDR4 16ГбОперативная память ADATA  AD4U266616G19-SGN DDR4 16Гб  Оперативная память ADATA  AD4U266616G19-SGN DDR4 16ГбОперативная память ADATA  AD4U266616G19-SGN DDR4 16Гб
+                        button.btn.fs--14-xs-10.outline-accent.p-2.color-accent.hover-outline-dark.fw-bold Посмотреть..
+                
+                .grid--3-3-2.gap-2.gap-md-3.my-5
+                    .grid-out.fs--48-24.fw-bold.color-main .grid--3-3-2
+                    .d-flex.flex-fill.shadow.p-3.p-md-4.flex-column.justify-content-between.align-items-start.gap-2.radius-main
+                        .fs--16-md-12.color-main.fw-bold.text-preview.text-preview-open.hover-dark еративная память ADATA  AD4U266616G19-SGN DDR4 16ГбОперативная память ADATA  AD4U266616G19-SGN DDR4 16Гб  Оперативная память ADATA  AD4U266616G19-SGN DDR4 16ГбОперативная память ADATA  AD4U266616G19-SGN DDR4 16Гб  Оперативная память ADATA  AD4U266616G19-SGN DDR4 16ГбОперативная память ADATA  AD4U266616G19-SGN DDR4 16Гб
+                        button.btn.fs--14-xs-10.outline-accent.p-2.color-accent.hover-outline-dark.fw-bold Посмотреть..
+                    .d-flex.flex-fill.shadow.p-3.p-md-4.flex-column.justify-content-between.align-items-start.gap-2.radius-main
+                        .fs--16-md-12.color-main.fw-bold.text-preview.text-preview-open.hover-dark еративная память ADATA  AD4U266616G19-SGN DDR4 16ГбОперативная память ADATA  AD4U266616G19-SGN DDR4 16Гб  Оперативная память ADATA  AD4U266616G19-SGN DDR4 16ГбОперативная память ADATA  AD4U266616G19-SGN DDR4 16Гб  Оперативная память ADATA  AD4U266616G19-SGN DDR4 16ГбОперативная память ADATA  AD4U266616G19-SGN DDR4 16Гб
+                        button.btn.fs--14-xs-10.outline-accent.p-2.color-accent.hover-outline-dark.fw-bold Посмотреть..
+                    .d-flex.flex-fill.shadow.p-3.p-md-4.flex-column.justify-content-between.align-items-start.gap-2.radius-main
+                        .fs--16-md-12.color-main.fw-bold.text-preview.text-preview-open.hover-dark еративная память ADATA  AD4U266616G19-SGN DDR4 16ГбОперативная память ADATA  AD4U266616G19-SGN DDR4 16Гб  Оперативная память ADATA  AD4U266616G19-SGN DDR4 16ГбОперативная память ADATA  AD4U266616G19-SGN DDR4 16Гб  Оперативная память ADATA  AD4U266616G19-SGN DDR4 16ГбОперативная память ADATA  AD4U266616G19-SGN DDR4 16Гб
+                        button.btn.fs--14-xs-10.outline-accent.p-2.color-accent.hover-outline-dark.fw-bold Посмотреть..
+                
+                .grid--4-2-1.gap-3.my-5
+                    .grid-out.fs--48-24.fw-bold.color-main .grid--4-2-1
+                    .d-flex.flex-fill.align-self-start.shadow.p-4.flex-column.justify-content-between.align-items-start.gap-2.radius-main
+                        .fs--16-md-12.color-main.fw-bold.text-preview.text-preview-open.hover-dark Оперативная память ADATA  AD4U266616G19-SGN DDR4 16ГбОперативная память ADATA  AD4U266616G19-SGN DDR4 16Гб  Оперативная память ADATA  AD4U266616G19-SGN DDR4 16ГбОперативная память ADATA  AD4U266616G19-SGN DDR4 16Гб  Оперативная память ADATA  AD4U266616G19-SGN DDR4 16ГбОперативная память ADATA  AD4U266616G19-SGN DDR4 16Гб
+                        button.btn.fs--14-12.outline-accent.p-2.color-accent.hover-outline-dark.fw-bold Посмотреть..
+                    .d-flex.flex-fill.align-self-start.shadow.p-4.flex-column.justify-content-between.align-items-start.gap-2.radius-main
+                        .fs--16-md-12.color-main.fw-bold.text-preview.text-preview-open.hover-dark Оперативная память ADATA  AD4U266616G19-SGN DDR4 16ГбОперативная память ADATA  AD4U266616G19-SGN DDR4 16Гб  Оперативная память ADATA  AD4U266616G19-SGN DDR4 16ГбОперативная память ADATA  AD4U266616G19-SGN DDR4 16Гб  Оперативная память ADATA  AD4U266616G19-SGN DDR4 16ГбОперативная память ADATA  AD4U266616G19-SGN DDR4 16Гб
+                        button.btn.fs--14-12.outline-accent.p-2.color-accent.hover-outline-dark.fw-bold Посмотреть..
+                    .d-flex.flex-fill.align-self-start.shadow.p-4.flex-column.justify-content-between.align-items-start.gap-2.radius-main
+                        .fs--16-md-12.color-main.fw-bold.text-preview.text-preview-open.hover-dark Оперативная память ADATA  AD4U266616G19-SGN DDR4 16ГбОперативная память ADATA  AD4U266616G19-SGN DDR4 16Гб  Оперативная память ADATA  AD4U266616G19-SGN DDR4 16ГбОперативная память ADATA  AD4U266616G19-SGN DDR4 16Гб  Оперативная память ADATA  AD4U266616G19-SGN DDR4 16ГбОперативная память ADATA  AD4U266616G19-SGN DDR4 16Гб
+                        button.btn.fs--14-12.outline-accent.p-2.color-accent.hover-outline-dark.fw-bold Посмотреть..
+                    .d-flex.flex-fill.align-self-start.shadow.p-4.flex-column.justify-content-between.align-items-start.gap-2.radius-main
+                        .fs--16-md-12.color-main.fw-bold.text-preview.text-preview-open.hover-dark Оперативная память ADATA  AD4U266616G19-SGN DDR4 16ГбОперативная память ADATA  AD4U266616G19-SGN DDR4 16Гб  Оперативная память ADATA  AD4U266616G19-SGN DDR4 16ГбОперативная память ADATA  AD4U266616G19-SGN DDR4 16Гб  Оперативная память ADATA  AD4U266616G19-SGN DDR4 16ГбОперативная память ADATA  AD4U266616G19-SGN DDR4 16Гб
+                        button.btn.fs--14-12.outline-accent.p-2.color-accent.hover-outline-dark.fw-bold Посмотреть..
+
+                .grid--4-2-2.gap-2.gap-md-3.my-5
+                    .grid-out.fs--48-24.fw-bold.color-main .grid-4-2-2
+                    .d-flex.flex-fill.align-self-start.shadow.p-3.p-md-4.flex-column.justify-content-between.align-items-start.gap-2.radius-main
+                        .fs--16-md-12.color-main.fw-bold.text-preview.text-preview-open.hover-dark Оперативная память ADATA  AD4U266616G19-SGN DDR4 16ГбОперативная память ADATA  AD4U266616G19-SGN DDR4 16Гб  Оперативная память ADATA  AD4U266616G19-SGN DDR4 16ГбОперативная память ADATA  AD4U266616G19-SGN DDR4 16Гб  Оперативная память ADATA  AD4U266616G19-SGN DDR4 16ГбОперативная память ADATA  AD4U266616G19-SGN DDR4 16Гб
+                        button.btn.fs--14-12.outline-accent.p-2.color-accent.hover-outline-dark.fw-bold Посмотреть..
+                    .d-flex.flex-fill.align-self-start.shadow.p-3.p-md-4.flex-column.justify-content-between.align-items-start.gap-2.radius-main
+                        .fs--16-md-12.color-main.fw-bold.text-preview.text-preview-open.hover-dark Оперативная память ADATA  AD4U266616G19-SGN DDR4 16ГбОперативная память ADATA  AD4U266616G19-SGN DDR4 16Гб  Оперативная память ADATA  AD4U266616G19-SGN DDR4 16ГбОперативная память ADATA  AD4U266616G19-SGN DDR4 16Гб  Оперативная память ADATA  AD4U266616G19-SGN DDR4 16ГбОперативная память ADATA  AD4U266616G19-SGN DDR4 16Гб
+                        button.btn.fs--14-12.outline-accent.p-2.color-accent.hover-outline-dark.fw-bold Посмотреть..
+                    .d-flex.flex-fill.align-self-start.shadow.p-3.p-md-4.flex-column.justify-content-between.align-items-start.gap-2.radius-main
+                        .fs--16-md-12.color-main.fw-bold.text-preview.text-preview-open.hover-dark Оперативная память ADATA  AD4U266616G19-SGN DDR4 16ГбОперативная память ADATA  AD4U266616G19-SGN DDR4 16Гб  Оперативная память ADATA  AD4U266616G19-SGN DDR4 16ГбОперативная память ADATA  AD4U266616G19-SGN DDR4 16Гб  Оперативная память ADATA  AD4U266616G19-SGN DDR4 16ГбОперативная память ADATA  AD4U266616G19-SGN DDR4 16Гб
+                        button.btn.fs--14-12.outline-accent.p-2.color-accent.hover-outline-dark.fw-bold Посмотреть..
+                    .d-flex.flex-fill.align-self-start.shadow.p-3.p-md-4.flex-column.justify-content-between.align-items-start.gap-2.radius-main
+                        .fs--16-md-12.color-main.fw-bold.text-preview.text-preview-open.hover-dark Оперативная память ADATA  AD4U266616G19-SGN DDR4 16ГбОперативная память ADATA  AD4U266616G19-SGN DDR4 16Гб  Оперативная память ADATA  AD4U266616G19-SGN DDR4 16ГбОперативная память ADATA  AD4U266616G19-SGN DDR4 16Гб  Оперативная память ADATA  AD4U266616G19-SGN DDR4 16ГбОперативная память ADATA  AD4U266616G19-SGN DDR4 16Гб
+                        button.btn.fs--14-12.outline-accent.p-2.color-accent.hover-outline-dark.fw-bold Посмотреть..
