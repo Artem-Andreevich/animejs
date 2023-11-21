@@ -1080,8 +1080,6 @@ footer {
 	}
 }
 
-
-
 .card-item {
 
 	position: relative;
@@ -1232,5 +1230,75 @@ footer {
 				transform: translateY(0px);
 			}
 		}
+	}
+}
+
+.gsap-anim {
+	position: relative;
+	height: 20000px;
+}
+.scene { 
+	position: fixed;
+	top: 0;
+	bottom: 0;
+
+	width: 100%;
+	height: 100vh;
+
+	background-color: #12012d;
+
+	> img { width: 100%; height: 100%; object-fit: cover;}
+
+}
+.first-scene {
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	z-index: 10;
+}
+
+
+.rocket {
+
+	position: fixed;
+	top: calc(100% - 550px);
+	left: calc(50% - 137px);
+	z-index: 100;
+
+	&__pic {
+		position: relative;
+		width: 274px;
+		height: 428px;
+		z-index: 5;
+	}
+
+	&__fire {
+		position: absolute;
+		top: 375px;
+		left: calc( 50% - 60px );
+		width: 120px;
+		height: 40px;
+		opacity: 0;
+		z-index: 11;
+	}
+
+	&__stock {
+		position: absolute;
+		top: 180px;
+		left: -94px;
+		height: 70%;
+		z-index: 10;
+	}
+
+	&__cloud {
+		position: absolute;
+		bottom: -125px;
+		left: calc(50% - 383px);
+		width: 800px;
+		min-width: 800px;
+		height: 0px;
+		// opacity: 0;
+		filter: blur(5px);
+		z-index: 10;
 	}
 }

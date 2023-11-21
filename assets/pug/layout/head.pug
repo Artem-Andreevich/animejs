@@ -19,11 +19,24 @@ html(lang="ru")
         script(src='js/bootstrap.min.js')
         script(src='js/slick.min.js')
         script(src='js/anime.min.js')
+        script(src='js/gsap/gsap.min.js')
+        script(src='js/gsap/ScrollTrigger.min.js')
+        //- script(src='js/gsap/Draggable.min.js')
+        //- script(src='js/gsap/EaselPlugin.min.js')
+        //- script(src='js/gsap/Flip.min.js')
+        //- script(src='js/gsap/MotionPathPlugin.min.js')
+        //- script(src='js/gsap/Observer.min.js')
+        //- script(src='js/gsap/PixiPlugin.min.js')
+        //- script(src='js/gsap/ScrollToPlugin.min.js')
+        //- script(src='js/gsap/TextPlugin.min.js')
         script(src='js/main.js')
+        script(src='js/gsap-anim.js')
     body.inner-page
         include svg.pug
         block modal
         .wrapper 
-            include header.pug
+            block header
+                include header.pug
             block content 
-            include footer.pug
+            block footer
+                include footer.pug

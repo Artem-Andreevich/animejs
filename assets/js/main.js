@@ -75,11 +75,12 @@ $(function (){
 
 
 
-	const warmPath = anime.path('.warm__path svg path')
+	const warmPath = anime.path(document.querySelector('.warm__path svg path'))
+	
 	const warmScroll =  anime({
 		targets: '.scroll-warm__ball',
-		translateX: warmPath( 'x' ),
-		translateY: warmPath( 'y' ),
+		translateX: function(){ if(warmPath) return warmPath( 'x' ) },
+		translateY: function(){ if(warmPath) return warmPath( 'y' ) },
 		duration: 600,
 		easing: 'linear',
 		autoplay: false,
@@ -88,14 +89,15 @@ $(function (){
 
 	const warmTouch =  anime({
 		targets: '.touch-warm__ball',
-		translateX: warmPath( 'x' ),
-		translateY: warmPath( 'y' ),
+		translateX: function(){ if(warmPath) return warmPath( 'x' ) },
+		translateY: function(){ if(warmPath) return warmPath( 'y' ) },
 		duration: 1600,
 		easing: 'linear',
 		autoplay: false,
 		loop: false,
+		complete: function(anim) { anim.reverse() }
 	})
-
+		
 	const recomendAnim = anime({
 		targets: [...document.querySelectorAll('.recomend-item')],
 		duration: 500,
@@ -179,7 +181,7 @@ $(function (){
 			},
 		},
 		{
-			target: 'main-banner',
+			target: 'banner__xs',
 			animation: rotateOnScroll,
 			remove: true,
 			scroll: true,
@@ -224,13 +226,15 @@ $(function (){
 
 
 	let observer = new IntersectionObserver(isVsible, observeOptions);
-	const animeElements = []
-	animeApply.forEach( el => animeElements.push(el.target))
-	animeElements.forEach ( el => { observer.observe(document.querySelector(`.${el}`)) })
+
+	animeApply.forEach( el => {
+		let animElement = document.querySelector(`.${el.target}`)
+		animElement ? observer.observe(animElement) : null 
+	})
 
 
-	document.querySelector('.touch-warm__ball').addEventListener('click' , () => { warmTouch.play() })
 
+	document.querySelector('.touch-warm__ball')?.addEventListener('click' , () => { warmTouch.play() })
 
 
 });
