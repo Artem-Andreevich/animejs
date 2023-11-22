@@ -1235,7 +1235,7 @@ footer {
 
 .gsap-anim {
 	position: relative;
-	height: 20000px;
+	height: 50000px;
 }
 .scene { 
 	position: fixed;
@@ -1245,7 +1245,7 @@ footer {
 	width: 100%;
 	height: 100vh;
 
-	background-color: #12012d;
+	// background-color: #12012d;
 
 	> img { width: 100%; height: 100%; object-fit: cover;}
 
@@ -1274,12 +1274,12 @@ footer {
 
 	&__fire {
 		position: absolute;
-		top: 375px;
+		top: 374px;
 		left: calc( 50% - 60px );
 		width: 120px;
 		height: 40px;
 		opacity: 0;
-		z-index: 11;
+		z-index: 4;
 	}
 
 	&__stock {
@@ -1287,7 +1287,7 @@ footer {
 		top: 180px;
 		left: -94px;
 		height: 70%;
-		z-index: 10;
+		z-index: 5;
 	}
 
 	&__cloud {
@@ -1299,6 +1299,6 @@ footer {
 		height: 0px;
 		// opacity: 0;
 		filter: blur(5px);
-		z-index: 10;
+		z-index: 5;
 	}
 }
