@@ -144,6 +144,9 @@ $(function (){
 	function now() {
 		return ( typeof performance === 'undefined' ? Date : performance ).now(); // see #10732
 	}
+	function getRandomInt(min, max) {
+		return Math.floor(Math.random() * (max - min)) + min;
+	}
 
 
 
@@ -211,7 +214,7 @@ $(function (){
 
 
 	// BACKGROUND ANIMATION
-	let sceneBG = gsap.timeline(".first-scene", {})
+	let sceneBG = gsap.timeline()
 	sceneBG.add( gsap.to('.first-scene', {
 		scrollTrigger: {
 			scrub: .1,
@@ -236,12 +239,37 @@ $(function (){
 	}))
 
 
+	// STARS ANIMATION
+	let stars = gsap.timeline()
+
+
+
+
 
 
 	let clock = new Clock
 	const tick = () => {
 		let elapsedTime = clock.getElapsedTime()
 		// let delta = clock.getDelta()
+
+		// gsap.fromTo('.stars', {
+		// 	top: getRandomInt(0, 350),
+		// 	left: `${getRandomInt(80, 99)}%`,
+		// 	width: getRandomInt(50, 110),
+		// 	height: getRandomInt(50, 110),
+		// 	opacity: .7,
+	
+		// }, {
+		// 	duration: .5,
+		// 	top: getRandomInt(850, 1000),
+		// 	left: `${getRandomInt(10, 15)}%`,
+		// 	width: getRandomInt(50, 110),
+		// 	height: getRandomInt(50, 110),
+		// 	opacity: 0,
+		// })	
+
+		// console.log( elapsedTime )
+
 
 		gsap.to('.rocket__pic',{
 			scrollTrigger: {

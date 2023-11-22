@@ -1489,3 +1489,8 @@ footer {
   filter: blur(5px);
   z-index: 5;
 }
+
+.stars {
+  display: block;
+  position: absolute;
+}
