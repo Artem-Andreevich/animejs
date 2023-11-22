@@ -221,6 +221,18 @@ $(function (){
 		},
 		x: 0,
 		y: '100vh',
+		filter: 'blur(10px)',
+	}))
+	sceneBG.add( gsap.to('.second-scene', {
+		scrollTrigger: {
+			scrub: .1,
+			start: '+=8500',
+			end: '+=10500',
+			pin: true,
+		},
+		x: 0,
+		// y: '100vh',
+		filter: 'blur(0px)',
 	}))
 
 

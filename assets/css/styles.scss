@@ -1256,6 +1256,14 @@ footer {
 	bottom: 0;
 	z-index: 10;
 }
+.second-scene {
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	z-index: 9;
+
+	filter: blur(2px);
+}
 
 
 .rocket {
@@ -1297,7 +1305,6 @@ footer {
 		width: 800px;
 		min-width: 800px;
 		height: 0px;
-		// opacity: 0;
 		filter: blur(5px);
 		z-index: 5;
 	}
