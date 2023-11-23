@@ -11,8 +11,8 @@
 }
 :root {
   scroll-behavior: inherit;
-  --bs-gutter-x: 20px;
-  --fs-72-32: 4.5rem;
+  --bs-gutter-x: clamp(15px, 4vw, 150px);
+  --fs-72-32: clamp(2rem, 3vw, 4.5rem);
   --fs-72-24: var(--fs-72-32);
   --fs-48-24: 3rem;
   --fs-48-sm-18: var(--fs-48-24);
@@ -162,7 +162,7 @@ body {
   min-width: 320px;
   font-family: "Montserrat", sans-serif;
   color: var(--text-color);
-  background: #fff;
+  background: #f0f0f0;
 }
 
 header {
@@ -1493,4 +1493,10 @@ footer {
 .stars {
   display: block;
   position: absolute;
+}
+
+.earth {
+  display: block;
+  position: absolute;
+  z-index: 5;
 }

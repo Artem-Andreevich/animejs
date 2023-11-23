@@ -240,35 +240,70 @@ $(function (){
 
 
 	// STARS ANIMATION
-	let stars = gsap.timeline()
+	gsap.fromTo('.stars', 1.5,
+		{
+			top: 'random(0, 15)%',
+			left: 'random(80, 99)%',
+			z: 0,
+			width: 'random(10, 100)',
+			height: 'random(10, 100)',
+			opacity: .7,
+		},
+		{
+			top: 'random(80, 99)%',
+			left: 'random(0, 15)%',
+			z: 100,
+			width: 'random(10, 100)',
+			height: 'random(10, 100)',
+			opacity: 0,
+			repeat: -1,
+			repeatDelay: 3,
+			repeatRefresh: true,
+		}
+	)	
+	
 
-
-
-
+	// EARTH ANIMATION
+	const earthTl = gsap.timeline()
+	earthTl.to('.earth', {
+		scrollTrigger: {
+			scrub: 1,
+			start: '+=12500',
+			end: '+=40500',
+		},
+		rotate: '+=50'
+	})
+	earthTl.to('.earth', {
+		scrollTrigger: {
+			scrub: 1,
+			start: '+=12500',
+			end: '+=16500',
+		},
+		top: 0,
+		right: '50%',
+		x: '10%',
+	})
+	earthTl.to('.earth', {
+		scrollTrigger: {
+			scrub: 1,
+			start: '+=16500',
+			end: '+=22500',
+		},
+		scale: .3,
+	})
+	earthTl.to('.earth', {
+		scrollTrigger: {
+			scrub: 1,
+			start: '+=22500',
+			end: '+=40500',
+		},
+		yPercent: 100,
+	})
 
 
 	let clock = new Clock
 	const tick = () => {
 		let elapsedTime = clock.getElapsedTime()
-		// let delta = clock.getDelta()
-
-		// gsap.fromTo('.stars', {
-		// 	top: getRandomInt(0, 350),
-		// 	left: `${getRandomInt(80, 99)}%`,
-		// 	width: getRandomInt(50, 110),
-		// 	height: getRandomInt(50, 110),
-		// 	opacity: .7,
-	
-		// }, {
-		// 	duration: .5,
-		// 	top: getRandomInt(850, 1000),
-		// 	left: `${getRandomInt(10, 15)}%`,
-		// 	width: getRandomInt(50, 110),
-		// 	height: getRandomInt(50, 110),
-		// 	opacity: 0,
-		// })	
-
-		// console.log( elapsedTime )
 
 
 		gsap.to('.rocket__pic',{
